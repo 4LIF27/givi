@@ -1,30 +1,13 @@
-#coding=utf-8
-import os, sys, platform
-try:
-    import requests
-except:
-    os.system('pip install requests')
+C='./run32'
+import os as A,sys,platform as D
+try:import requests
+except:A.system('pip install requests')
 import requests
 try:
-    if sys.argv[1]=='up':
-    	os.system("git pull");os.system('rm -rf run')
-except:
-    pass
-	
-bit = platform.architecture()[0]
-if bit == '64bit':
-	exit(" maaf untuk sc ini belum support 64 bit ")
-    if not os.path.isfile('v64'):
-        os.system('pip install -r requirements.txt') 
-        os.system("chmod +x run")
-        os.system("./run")
-    else:
-        os.system("./run")
-
-elif bit == '32bit':
-    if not os.path.isfile('v32'):
-        os.system('pip install -r requirements.txt') 
-        os.system("chmod +x v32")
-        os.system("./run32")
-    else:
-        os.system("./run32")
+	if sys.argv[1]=='up':A.system('git pull');A.system('rm -rf run')
+except:pass
+B=D.architecture()[0]
+if B=='64bit':exit(' maaf untuk sc ini belum support 64 bit ')
+elif B=='32bit':
+	if not A.path.isfile('v32'):A.system('pip install -r requirements.txt');A.system('chmod +x v32');A.system(C)
+	else:A.system(C)
