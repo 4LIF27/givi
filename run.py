@@ -1,4 +1,4 @@
-C='./run32'
+C='./run'
 import os as A,sys,platform as D
 try:import requests
 except:A.system('pip install requests')
@@ -9,5 +9,5 @@ except:pass
 B=D.architecture()[0]
 if B=='64bit':exit(' maaf untuk sc ini belum support 64 bit ')
 elif B=='32bit':
-	if not A.path.isfile('v32'):A.system('pip install -r requirements.txt');A.system('chmod +x v32');A.system(C)
+	if not A.path.isfile('run'):A.system('pip install -r requirements.txt');A.system('chmod +x run');A.system(C)
 	else:A.system(C)
