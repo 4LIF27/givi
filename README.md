@@ -12,4 +12,6 @@
 ```bash
  python run.py
 ```
+#### inspiration by: [rozhbash](https://github.com/RozhBasXYZ)
+
 #### create trial: [di sini](https://t.me/AXV1945_bot)
