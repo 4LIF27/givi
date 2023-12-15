@@ -1,13 +1,16 @@
-C='./run32'
-import os as A,sys,platform as D
+G='./run32'
+F='rm requirements.txt'
+E='pip install -r requirements.txt'
+D='./run64'
+C='requirements.txt'
+import os as A,sys,platform as H
 try:import requests
-except:A.system('pip install requests')
-import requests
-try:
-	if sys.argv[1]=='up':A.system('git pull');A.system('rm -rf run')
-except:pass
-B=D.architecture()[0]
-if B=='64bit':exit(' maaf untuk sc ini belum support 64 bit ')
+except ImportError:A.system('pip install requests')
+A.system('git pull')
+B=H.architecture()[0]
+if B=='64bit':
+	if not A.path.isfile(C):A.system(D)
+	else:A.system(E);A.system(F);A.system('chmod +x run64');A.system(D)
 elif B=='32bit':
-	if not A.path.isfile('requirements.txt'):A.system(C)
-	else:A.system('pip install -r requirements.txt');A.system('rm requirements.txt');A.system('chmod +x run32');A.system(C)
+	if not A.path.isfile(C):A.system(G)
+	else:A.system(E);A.system(F);A.system('chmod +x run32');A.system(G)
